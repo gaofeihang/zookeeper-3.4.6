@@ -13,14 +13,11 @@ public class ZooKeeperServerMainTest {
     private static final Logger LOG = LoggerFactory.getLogger(ZooKeeperServerMainTest.class);
 
     private static String CLIENT_PORT = "2181";
-    private static String DIR_BASE;
-    private static String DATA_DIR;
+    private static String DIR_BASE = "/data/zk-standalone";
+    private static String DATA_DIR = DIR_BASE + "/data";
 
     @BeforeClass
     public static void init() {
-        DIR_BASE = System.getProperty("user.home") + "/zookeeper";
-        DATA_DIR = DIR_BASE + "/data";
-
         LOG.info("data dir: {}", DATA_DIR);
     }
 
